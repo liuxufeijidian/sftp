@@ -1,0 +1,36 @@
+var $ = jquery = require("jquery/jquery-2.1.4.min.js");
+require("zepto/touch.js");
+require("sweetalert/sweetalert.min.js");
+
+/*$(function() {
+	$(".submit").click(function() {
+		if ($("textarea[name='remark']").val() == '') {
+			swal("", "请填写投诉内容", "warning");
+			return;
+		}
+		swal({
+			title : "",
+			text : "投诉成功",
+			type : "warning",
+			showCancelButton : false,
+			confirmButtonColor : "#DD6B55",
+			confirmButtonText : "确定",
+			cancelButtonText : "取消",
+			closeOnConfirm : false,
+			closeOnCancel : true
+		}, function(isConfirm) {
+			history.go(-2);
+		});
+	});
+});*/
+$(document).ready(function(){
+	  $("form").submit(function(e){
+	   /* e.preventDefault();*/
+	    if($("textarea[name='complainContent']").val() == '') {
+			swal("", "请填写投诉内容", "warning");
+			e.preventDefault();
+			return;
+		}
+	    swal("", "投诉成功", "success");
+	  });
+	});

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+	id="viewport" name="viewport" />
+<meta content="telephone=no" name="format-detection" />
+<title>投诉结果</title>
+<link href="/modules/base/css/common.css" rel="stylesheet"
+	type="text/css">
+<link href="/modules/personal-center/css/personal-center.css"
+	rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="padding-side border-box">
+	<div class="container report">
+		<section class="border radius padding-side ">
+			<div class="split">
+				<b></b>亲爱的用户,你还没有提建议
+			</div>
+			<br />
+			<div>
+				<b class="mention-color"><a
+					th:href="@{/weixin/pageReportOnline(userId=${userId})}"
+					class="bg radius fixed-height flex items-center shadow">在线投诉</a> </b>
+			</div>
+		</section>
+
+	</div>
+
+	<script type="text/javascript" src="/lib/mod.js"></script>
+	<!--SCRIPT_PLACEHOLDER-->
+
+	<script type="text/javascript">
+		require("/modules/personal-center/js/report-result");
+	</script>
+</body>
+</html>

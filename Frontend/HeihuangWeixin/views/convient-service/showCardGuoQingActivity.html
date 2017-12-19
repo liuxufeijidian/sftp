@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+	id="viewport" name="viewport" />
+<meta content="telephone=no" name="format-detection" />
+<title>国庆礼包</title>
+<link href="/modules/base/css/common.css" rel="stylesheet"
+	type="text/css">
+<link href="/modules/convenient-service/css/convenient-service.css"
+	rel="stylesheet" type="text/css">
+<link href="/components/sweetalert/sweetalert.css" rel="stylesheet"
+	type="text/css">
+</head>
+
+<body class="padding-side border-box has-fixed-ele">
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	
+	<if th:if=${orderStatus}==2>
+	<div class="container" align="center">您已成功购买国庆洗车无忧礼包<br/>
+		（内饰预约电话：400-801-5560）</div>
+	</if>
+	<if th:if=${orderStatus}==1>
+	<div class="container" align="center">现金支付订单已生成<br/>
+		请拨打客服电话：400-801-5560联系缴费。</div>
+	</if>
+	<script type="text/javascript" src="/lib/mod.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<!--SCRIPT_PLACEHOLDER-->
+	<script type="text/javascript">
+		require("/modules/convenient-service/js/activityShow");
+	</script>
+
+</body>
+</html>

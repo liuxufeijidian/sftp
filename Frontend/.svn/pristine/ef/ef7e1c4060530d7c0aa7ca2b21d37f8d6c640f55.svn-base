@@ -1,0 +1,89 @@
+<link rel="stylesheet" type="text/css" href="/components/parsley/parsley.css" />
+<link rel="stylesheet" type="text/css" href="/components/datetimepicker/bootstrap-datetimepicker.css" />
+<!-- widget grid -->
+<section id="widget-grid" class="">
+	<!-- row -->
+	<div class="row">
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<table id="jqgrid"></table>
+			<div id="pjqgrid"></div>
+		</article>
+		<!-- WIDGET END -->
+	</div>
+	<!-- end row -->
+</section>
+<div id="updateUserCarWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="updateUserCarForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">车牌号</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="plate" required="">
+				</label>
+			</section>
+			<section>
+				<label class="label">车位</label>
+				<label class="select"> <select class="input-sm" name="parkArea" required=""></select><i></i> </label>
+			</section>
+			<section>
+				<label class="label">车型</label>
+				<label class="select">
+					<select class="input-sm" name="carType">
+						<option value="SUV">SUV</option>
+						<option value="轿车">轿车</option>
+					</select> <i></i> </label>
+				<input type="hidden" name="userId" />
+				<input type="hidden" name="id" />
+			</section>
+		</fieldset>
+	</form>
+</div>
+<div id="updateOrderWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="updateOrderForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">是否在库</label>
+				<label class="select">
+					<input type="hidden" name="id" />
+					<select class="input-sm" name="userCarStatus" id="userCarStatus">
+						<option value="1">在库</option>
+						<option value="0">未在库</option>
+					</select> <i></i> </label>
+			</section>
+			<section style="display: none" id="carTimeSection">
+				<label class="label">在库时间</label>
+				<label class="select">
+					<select class="input-sm" name="userCarTime">
+						<option value="20:00前">20:00前</option>
+						<option value="22:00前">22:00前</option>
+						<option value="24:00前">24:00前</option>
+					</select> <i></i> </label>
+			</section>
+			<section>
+				<label class="label">订单状态</label>
+				<label class="select">
+					<select class="input-sm" name="orderStatus">
+						<option value="2">已支付</option>
+						<option value="3">服务结束</option>
+					</select> <i></i> </label>
+			</section>
+			<section>
+				<label class="label">服务时间</label>
+				<label class="input">
+					<input class="input-xs form_datetime" name="serviceTime" type="text" >
+				</label>
+			</section>
+			<section>
+				<label class="label">备注</label>
+				<label class="input">
+					<input class="input-xs" name="remark" type="text" >
+				</label>
+			</section>
+		</fieldset>
+	</form>
+</div>
+<script type="text/javascript" src="/lib/mod_ajax.js"></script>
+<section id="scriptTag"></section>
+<!--SCRIPT_PLACEHOLDER-->
+<script type="text/javascript">require.async("/modules/business/singleOrder");</script><!--ignore-->

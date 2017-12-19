@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>小区选择</title>
+		<link href="/modules/base/css/common.css" rel="stylesheet" type="text/css">
+		<link href="/modules/convenient-service/css/convenient-service.css" rel="stylesheet" type="text/css">
+		<link href="/modules/convenient-service/css/channel-select.css" rel="stylesheet" type="text/css">
+
+	</head>
+
+	<body class="border-box cornor-bg">
+
+		<div class="channel-select" id="channel-select-other">
+			<a href="#" class="block">其他小区&nbsp;></a>
+			<div class="pos-group">
+				<div class="pos-center-logo no-repeat"></div>
+				<div class="bg pos-center no-repeat">
+					<div class="flex items-center">
+						<div class="bg flex-grow line"></div>
+						<div class="bg pos-side border-box flex-shrink">
+							<a href="#" class="reverse-rotate no-repeat flex items-center justify-center no-service"> </a>
+						</div>
+					</div>
+					<div class="flex items-center">
+						<div class="bg flex-grow line"></div>
+						<div class="bg pos-side border-box flex-shrink">
+							<a th:href="@{/weixin/pageUserManageIndexById(userId=${userId})}" class="reverse-rotate no-repeat flex items-center justify-center" >个人中心</a>
+						</div>
+					</div>
+					<div class="flex items-center">
+						<div class="bg flex-grow line"></div>
+						<div class="bg pos-side border-box flex-shrink">
+							<a th:href="@{/weixin/pagePetManageIndex(userId=${userId})}" class="reverse-rotate no-repeat flex items-center justify-center" > 宠物管家 </a>
+						</div>
+					</div>
+					<div class="flex items-center">
+						<div class="bg flex-grow line"></div>
+						<div class="bg pos-side border-box flex-shrink">
+							<a href="#" class="reverse-rotate no-repeat flex items-center justify-center no-service" > </a>
+						</div>
+					</div>
+					<div class="flex items-center">
+						<div class="bg flex-grow line"></div>
+						<div class="bg pos-side border-box flex-shrink">
+							<a href="#" class="reverse-rotate no-repeat flex items-center justify-center no-service" > </a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<script type="text/javascript" src="/lib/mod.js"></script>
+		<!--SCRIPT_PLACEHOLDER-->
+
+		<script type="text/javascript">
+			require("/modules/convenient-service/js/channel-select-other");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>上门美宠</title>
+		<link href="/modules/base/css/common.css" rel="stylesheet" type="text/css">
+		<link href="/modules/convenient-service/css/convenient-service.css" rel="stylesheet" type="text/css">
+		<link href="/components/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+		<link href="/components/sweetalert/swal-forms.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body class="padding-side border-box has-fixed-ele">
+		<div class="container">
+			<form class="order-fill">
+				<div class="flex">
+					<div class="flex radius fixed-height shadow items-center bg border-box flex-grow equal-width">
+						<div class="fill-title">
+							宠物名
+						</div>
+						<select class="fill-content flex-grow" name="petId" >
+							<option th:each="pet : ${pets}" th:value="${pet.id}" th:text="${pet.petName}"></option>
+						</select>
+					</div>
+					<div class="flex radius fixed-height shadow items-center bg border-box flex-grow equal-width justify-center" id="add-pet">
+						添加宠物
+					</div>
+				</div>
+				<div class="flex">
+					<div class="flex radius fixed-height shadow items-center bg border-box flex-grow equal-width">
+						<div class="fill-title">
+							姓名
+						</div>
+						<input type="text" name="userName" class="block flex-grow fill-content" th:value="${user.userName}">
+					</div>
+					<div class="flex radius fixed-height shadow items-center border-box flex-grow equal-width bg">
+						<div class="fill-title">
+							电话
+						</div>
+						<input type="tel" name="mobile" class="block flex-grow fill-content" th:value="${user.mobile}">
+					</div>
+				</div>
+				<div class="flex">
+					<div class="flex radius fixed-height shadow items-center bg border-box flex-grow">
+						<div class="fill-title">
+							服务时间
+						</div>
+						<input type="date" name="time" class="block flex-grow fill-content">
+					</div>
+				</div>
+				<div class="flex">
+					<div class="flex radius fixed-height shadow items-center bg border-box flex-grow">
+						<div class="fill-title">
+							地址
+						</div>
+						<input type="text" name="address" class="block flex-grow fill-content">
+					</div>
+				</div>
+
+				<div class="flex remark">
+					<div class="flex radius shadow bg border-box flex-grow">
+						<div class="">
+							备注：
+						</div>
+						<textarea type="text" name="remark" class="block flex-grow border-box"></textarea>
+					</div>
+				</div>
+				<input type="hidden" th:value="${userId}" name="userId" />
+			</form>
+
+		</div>
+		<div class="fixed-bottom border-box flex justify-center items-center">
+			<a href="#" class="submit block">确认预约</a>
+		</div>
+		<script type="text/javascript" src="/lib/mod.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<!--SCRIPT_PLACEHOLDER-->
+		<script type="text/javascript">
+			require("/modules/convenient-service/js/pet-order-fill");
+		</script>
+
+	</body>
+</html>

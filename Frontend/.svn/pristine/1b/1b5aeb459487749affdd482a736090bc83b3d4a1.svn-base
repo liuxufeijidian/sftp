@@ -1,0 +1,35 @@
+﻿<!DOCTYPE HTML>
+<html lang="ch">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title>途问 车主出行社交APP</title>
+		<meta content="途问，车主朋友圈，音乐电台，云途科技，同路社交，语音播报，自驾出行，路况信息，车载FM，福来卡" name="keywords">
+		<meta content="途问，车主出行社交APP" name="description">
+		<meta content='途问是一款专注于车主出行社交的社区化车联网APP。依托周边车主、同路陌生人、朋友圈的社交功能共享实时交通道路信息，分享和发现好的音乐，为每个用户打造全新的驾车出行社区生活。' name='description'>
+	</head>
+	<script src="https://s95.cnzz.com/z_stat.php?id=1259950996&web_id=1259950996" language="JavaScript" type="hidden"></script>
+	<body>
+		<script type="text/javascript">
+			function isPC() {
+				var userAgentInfo = navigator.userAgent;
+				var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+				var flag = true;
+				for (var v = 0; v < Agents.length; v++) {
+					if (userAgentInfo.indexOf(Agents[v]) > 0) {
+						flag = false;
+						break;
+					}
+				}
+				return flag;
+			}
+			window.onload = function() {
+				if(isPC() == false) {
+					location.href = "/mobile/index.html";
+				} else {
+					location.href = "main.html";
+				}
+			};
+		</script>
+	</body>
+</html>

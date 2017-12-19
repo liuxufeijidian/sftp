@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+	id="viewport" name="viewport" />
+<meta content="telephone=no" name="format-detection" />
+<title>在线投诉</title>
+<link href="/modules/base/css/common.css" rel="stylesheet"
+	type="text/css">
+<link href="/modules/personal-center/css/personal-center.css"
+	rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="padding-side border-box">
+	<div class="container report">
+		<section class="border radius padding-side ">
+			<div class="split">
+				<b>用户问题：</b>亲爱的用户,你还没有提建议是我们dad
+			</div>
+			<div>
+				<b class="mention-color">客服回复：</b>
+			</div>
+		</section>
+		<section class="border radius padding-side ">
+			<div class="split">
+				<b>用户问题：</b>
+			</div>
+			<div>
+				<b class="mention-color">客服回复：</b>尊敬的客户你好。这个优惠卷是洗车优惠卷是不能用于购买宠物用品的
+			</div>
+		</section>
+	</div>
+
+	<script type="text/javascript" src="/lib/mod.js"></script>
+	<!--SCRIPT_PLACEHOLDER-->
+
+	<script type="text/javascript">
+		require("/modules/personal-center/js/report-result");
+	</script>
+</body>
+</html>

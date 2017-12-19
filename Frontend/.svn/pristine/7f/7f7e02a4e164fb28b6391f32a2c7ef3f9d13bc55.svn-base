@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>小区选择</title>
+		<link href="/modules/base/css/common.css" rel="stylesheet" type="text/css">
+		<link href="/modules/convenient-service/css/convenient-service.css" rel="stylesheet" type="text/css">
+		
+</head>
+
+
+<body class="padding-side border-box">
+      <div class="container">
+         <form class="order-fill">
+              <div class="flex justify-center evaluation">
+                  <input type="checkbox" class="star"><input type="checkbox" class="star"><input type="checkbox" class="star"><input type="checkbox" class="star"><input type="checkbox" class="star">
+              </div>
+              <div class="flex">
+                <div class="flex radius fixed-height shadow items-center bg border-box flex-grow">
+                     <div class="fill-title">服务时间</div><input type="text" name="service-time" class="block flex-grow fill-content">
+                </div>
+              </div>
+
+              <div class="flex remark">
+                <div class="flex radius shadow bg border-box flex-grow">
+                     <div class="">备注：</div><textarea type="text" name="remark" class="block flex-grow border-box"></textarea>
+                </div>
+              </div>
+              <div class="flex border radius justify-center items-center photo-wrapper">
+                   <div class="flex items-center justify-center no-display close">×</div>
+                   <div class="flex justify-center add items-center upload no-display" href="#">上传照片<input type="file" accept="image/*;capture=camera" id="files"></div> 
+                   
+              </div>
+         </form>
+          
+      </div>
+      
+      <script type="text/javascript" src="/lib/mod.js"></script>
+		<!--SCRIPT_PLACEHOLDER-->
+		
+	  <script type="text/javascript">
+			require("/modules/pet-service-manage/js/check-evaluation");
+	  </script>
+
+</body>
+</html>

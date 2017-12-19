@@ -1,0 +1,73 @@
+<link rel="stylesheet" type="text/css" href="/components/parsley/parsley.css" />
+<!-- widget grid -->
+<section id="widget-grid" class="">
+	<!-- row -->
+	<div class="row">
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<table id="jqgrid"></table>
+			<div id="pjqgrid"></div>
+		</article>
+		<!-- WIDGET END -->
+	</div>
+	<!-- end row -->
+</section>
+<div ng-app="productModelForm">
+<div id="addProductModelWindow">
+	<fieldset>
+		<form class="form-inline smart-form" id="addProductModelForm" data-parsley-validate>
+			<fieldset class="mySet" style="padding: 5px 14px 5px !important;background: none">
+				<section>
+					<label class="label">产品类型名称</label>
+					<label class="input">
+						<input type="text" name="productModel" class="input-xs" required="">
+					</label>
+				</section>
+				<section ng-controller="partnerList">
+					<label class="label">所属合作商</label>
+					<label class="input">
+						<select name="partnerId" class="input-xs">
+							<option ng-repeat="partner in partners" value="{{partner.partnerId}}">{{partner.partnerName}}</option>
+						</select>
+					</label>
+				</section>
+				
+			</fieldset>
+		</form>
+	</fieldset>
+</div>
+
+<div id="editProductModelWindow" >
+	<fieldset>
+		<form class="form-inline smart-form" id="editProductModelForm" data-parsley-validate>
+			<fieldset class="mySet" style="padding: 5px 14px 5px !important;background: none">
+			<input type="hidden" name="id" id="id">
+				<section>
+					<label class="label">产品类型名称</label>
+					<label class="input">
+						<input type="text" id="productModel" name="productModel" class="input-xs" required="">
+					</label>
+				</section>
+				<section ng-controller="partnerList">
+					<label class="label">所属合作商</label>
+					<label class="input">
+						<select name="partnerId" id="partnerId" class="input-xs">
+							<option ng-repeat="partner in partners" value="{{partner.partnerId}}">{{partner.partnerName}}</option>
+						</select>
+					</label>
+				</section>
+				
+			</fieldset>
+		</form>
+	</fieldset>
+</div>
+
+</div>
+<script type="text/javascript" src="/lib/mod_ajax.js"></script>
+<section id="scriptTag"></section>
+<!--SCRIPT_PLACEHOLDER-->
+<script type="text/javascript">
+	require.async("/modules/system/productModel");
+</script>
+
+

@@ -1,0 +1,312 @@
+<link rel="stylesheet" type="text/css" href="/components/parsley/parsley.css" />
+<section id="widget-grid" class="">
+	<!-- row -->
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="alert alert-block alert-success" style="height: 88px">
+				<h4 class="alert-heading">用户查询</h4>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="请输入用户手机号" id="userMobile">
+						<input type="text" class="form-control" placeholder="请输入用户昵称" id="nickname">
+					</div>
+					<button class="btn btn-default" id="search-btn">
+						搜索
+					</button>
+					<button class="btn btn-default" id="reset-btn">
+						重置
+					</button>
+				</form>
+			</div>
+		</div>
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<table id="jqgrid"></table>
+			<div id="pjqgrid"></div>
+		</article>
+		<!-- WIDGET END -->
+	</div>
+	<!-- end row -->
+</section>
+
+<!-- widget grid -->
+<section id="widget-grid" class="">
+	<!-- row -->
+	<div class="row">
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<table id="jqgrid"></table>
+			<div id="pjqgrid"></div>
+		</article>
+		<!-- WIDGET END -->
+	</div>
+	<!-- end row -->
+</section>
+
+<div id="checkPetWindow" style="overflow-x: hidden">
+	<div class="row" id="checkPetRow">
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<table id="petGrid"></table>
+			<div id="petGridFooter"></div>
+		</article>
+		<!-- WIDGET END -->
+	</div>
+</div>
+
+<div id="checkUserCarWindow" style="overflow-x: hidden">
+	<div class="row" id="checkUserCarRow">
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<table id="userCarGrid"></table>
+			<div id="userCarFooter"></div>
+		</article>
+		<!-- WIDGET END -->
+	</div>
+</div>
+
+<div id="addUserCarWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="addUserCarForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">车牌号</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="plate" required="">
+				</label>
+			</section>
+			<section>
+				<label class="label">车位</label>
+				<label class="select">
+					<select class="input-sm" name="parkArea">
+					</select><i></i> 
+				</label>
+			</section>
+			<section>
+				<label class="label">车型</label>
+				<label class="select">
+					<select class="input-sm" name="carType">
+						<option value="SUV">SUV</option>
+						<option value="轿车">轿车</option>
+					</select> <i></i>
+				</label>
+			</section>
+			<section>
+				<label class="label">备注</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="remark" required="">
+					<input type="hidden" name="userId" />
+				</label>
+			</section>
+		</fieldset>
+	</form>
+</div>
+
+<div id="updateUserCarWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="updateUserCarForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">车牌号</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="plate" required="">
+				</label>
+			</section>
+			<section>
+				<label class="label">车位</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="parkArea" required=""> 
+				</label>
+			</section>
+			<section>
+				<label class="label">车型</label>
+				<label class="select">
+					<select class="input-sm" name="carType">
+						<option value="SUV">SUV</option>
+						<option value="轿车">轿车</option>
+					</select> <i></i>
+				</label>
+			</section>
+		</fieldset>
+	</form>
+</div>
+
+<div id="addPetWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="addPetForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">宠物名</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="petName" required="">
+				</label>
+			</section>
+			<section>
+				<label class="label">宠物年龄</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="petAge" required=""> 
+				</label>
+			</section>
+			<section>
+				<label class="label">宠物类型</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="petType" required=""> 
+				</label>
+			</section>
+			<section>
+				<label class="label">是否具有攻击性</label>
+				<label class="select">
+					<select class="input-sm" name="isAttack">
+						<option value="0">无</option>
+						<option value="1">有</option>
+					</select> <i></i>
+				</label>
+			</section>
+			<section>
+				<label class="label">宠物身体状况</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="petCondition" required=""> 
+				</label>
+			</section>
+			<section>
+				<label class="label">备注</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="remark" required="">
+					<input type="hidden" name="userId" />
+				</label>
+			</section>
+		</fieldset>
+	</form>
+</div>
+
+<div id="updatePetWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="updatePetForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">宠物名</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="petName" required="">
+				</label>
+			</section>
+			<section>
+				<label class="label">宠物年龄</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="petAge" required=""> 
+				</label>
+			</section>
+			<section>
+				<label class="label">宠物类型</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="petType" required=""> 
+				</label>
+			</section>
+			<section>
+				<label class="label">是否具有攻击性</label>
+				<label class="select">
+					<select class="input-sm" name="isAttack">
+						<option value="0">无</option>
+						<option value="1">有</option>
+					</select> <i></i>
+				</label>
+			</section>
+			<section>
+				<label class="label">宠物身体状况</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="petCondition" required=""> 
+				</label>
+			</section>
+			<section>
+				<label class="label">备注</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="remark" required="">
+					<input type="hidden" name="userId" />
+					<input type="hidden" name="id" />
+				</label>
+			</section>
+		</fieldset>
+	</form>
+</div>
+
+<div id="checkUserCouponWindow" style="overflow-x: hidden">
+	<div class="row" id="checkUserCouponRow">
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<table id="userCouponGrid"></table>
+			<div id="userCouponFooter"></div>
+		</article>
+		<!-- WIDGET END -->
+	</div>
+</div>
+
+<div id="updateUserWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="updateUserForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">用户名</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="userName" id="userName" required="">
+				</label>
+			</section>
+			<section>
+				<label class="label">性别</label>
+				<label class="select">
+					<select class="input-sm" name="sex">
+						<option value="1">男</option>
+						<option value="0">女</option>
+					</select> <i></i> </label>
+			</section>
+			<section>
+				<label class="label">联系方式</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="mobile" id="mobile" required="">
+				</label>
+			</section>
+			<section>
+				<label class="label">小区</label>
+				<label class="select">
+					<select class="input-sm" name="villeage">
+					</select> <i></i> </label>
+				</label>
+			</section>
+			<section>
+				<label class="label">房号</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="roomNo" id="roomNo" required="">
+					<input type="hidden" name="id" id="id" />
+				</label>
+			</section>
+		</fieldset>
+	</form>
+</div>
+
+<div id="sendMsgWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="sendMsgForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">通知内容</label>
+				<label class="textarea">
+					<textarea rows="3" class="custom-scroll" id="message" name="content"></textarea> 
+				</label>
+				<input type="hidden" name="mobile" />
+			</section>
+		</fieldset>
+	</form>
+</div>
+
+<div id="addUserCouponWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="addUserCouponForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">选择优惠券</label>
+				<label class="select">
+					<select class="input-sm" name="couponList" id="couponList">
+					</select> <i></i>
+				</label>
+				<input type="hidden" name="userId" />
+			</section>
+		</fieldset>
+	</form>
+</div>
+
+
+<script type="text/javascript" src="/lib/mod_ajax.js"></script>
+<section id="scriptTag"></section>
+<!--SCRIPT_PLACEHOLDER-->
+<script type="text/javascript">require.async("/modules/business/user");</script><!--ignore-->

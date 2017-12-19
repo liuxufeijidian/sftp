@@ -1,0 +1,130 @@
+<link rel="stylesheet" type="text/css" href="/components/parsley/parsley.css" />
+<!-- widget grid -->
+<section id="widget-grid" class="">
+	<!-- row -->
+	<div class="row">
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<table id="jqgrid"></table>
+			<div id="pjqgrid"></div>
+		</article>
+		<!-- WIDGET END -->
+	</div>
+	<!-- end row -->
+</section>
+
+<div id="addPtnerWindow">
+	<fieldset>
+		<form class="form-inline smart-form" id="addPtnerForm" data-parsley-validate>
+			<fieldset class="mySet" style="padding: 5px 14px 5px !important;background: none">
+				<section>
+					<label class="label">合作商名</label>
+					<label class="input">
+						<input type="hidden" name="partnerId" />
+						<input type="text" name="partnerName" class="input-xs" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">合作商code</label>
+					<label class="input">
+						<input type="text" name="partnerCode" class="input-xs" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">地域code</label>
+					<label class="input">
+						<input type="text" name="areaCode" class="input-xs" required="">
+					</label>
+				</section>
+				<!--
+				<section>
+					<label class="label">合作商类型</label>
+					<label class="input">
+						<input type="text" name="partnerType" class="input-xs" required="">
+					</label>
+				</section>-->
+				<section>
+					<label class="label">联系人</label>
+					<label class="input">
+						<input type="text" name="contact" class="input-xs" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">联系电话</label>
+					<label class="input">
+						<input type="text" name="telephone" class="input-xs" required="" parsley-type="phone">
+					</label>
+				</section>
+				<section>
+					<label class="label">邮件</label>
+					<label class="input">
+						<input type="text" name="email" class="input-xs" required="" parsley-type="email">
+						<input type="hidden" name="state" value="1">
+					</label>
+				</section>
+			</fieldset>
+		</form>
+	</fieldset>
+</div>
+
+<div id="editPtnerWindow">
+	<fieldset>
+		<form class="form-inline smart-form" id="editPtnerForm" data-parsley-validate>
+			<fieldset class="mySet" style="padding: 5px 14px 5px !important;background: none">
+				<section>
+					<label class="label">合作商名</label>
+					<label class="input">
+						<input type="hidden" name="partnerId"  id="partnerId"/>
+						<input type="text" name="partnerName" id="partnerName" class="input-xs" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">合作商code</label>
+					<label class="input">
+						<input type="text" name="partnerCode" id="partnerCode" class="input-xs" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">地域code</label>
+					<label class="input">
+						<input type="text" name="areaCode" id="areaCode" class="input-xs" required="">
+					</label>
+				</section>
+				<!--
+				<section>
+					<label class="label">合作商类型</label>
+					<label class="input">
+						<input type="text" name="partnerType" id="partnerType" class="input-xs" required="">
+					</label>
+				</section>-->
+				<section>
+					<label class="label">联系人</label>
+					<label class="input">
+						<input type="text" name="contact" id="contact" class="input-xs" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">联系电话</label>
+					<label class="input">
+						<input type="text" name="telephone" id="telephone" class="input-xs" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">邮件</label>
+					<label class="input">
+						<input type="text" name="email" id="email" class="input-xs" required="">
+						<input type="hidden" name="state" id="state" value="1">
+					</label>
+				</section>
+			</fieldset>
+		</form>
+	</fieldset>
+</div>
+<script type="text/javascript" src="/lib/mod_ajax.js"></script>
+<section id="scriptTag"></section>
+<!--SCRIPT_PLACEHOLDER-->
+<script type="text/javascript">
+	require.async("/modules/system/parter");
+</script>
+
+

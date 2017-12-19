@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+	id="viewport" name="viewport" />
+<meta content="telephone=no" name="format-detection" />
+<title>在线投诉</title>
+<link href="/modules/base/css/common.css" rel="stylesheet"
+	type="text/css">
+<link href="/modules/personal-center/css/personal-center.css"
+	rel="stylesheet" type="text/css">
+<link href="/components/sweetalert/sweetalert.css" rel="stylesheet"
+	type="text/css">
+</head>
+
+<body class="padding-side border-box">
+	<div class="container report ">
+		<form class="edit-info">
+
+			<div class="flex remark ">
+				<div class="flex radius border-box flex-grow bg shadow">
+					<div class="">投诉内容：</div>
+					<!-- <input type="hidden" name="userId" value="${userId}"> -->
+					<input type="hidden" th:value="${userId}" name="userId" />
+					<textarea type="text" name="complainContent"
+						class="block flex-grow border-box" style="height:15rem"></textarea>
+				</div>
+			</div>
+			<div class="fixed-bottom border-box flex justify-center items-center">
+				<input type="submit" class="submit" value="提交投诉">
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="/lib/mod.js"></script>
+	<!--SCRIPT_PLACEHOLDER-->
+
+	<script type="text/javascript">
+		require("/modules/personal-center/js/report-online");
+	</script>
+</body>
+</html>

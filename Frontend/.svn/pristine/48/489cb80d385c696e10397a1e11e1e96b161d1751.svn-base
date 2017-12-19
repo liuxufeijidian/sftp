@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>宠物常见问题</title>
+
+	</head>
+
+	<body>
+		<div style="width:100%;">
+			<img style="max-width: 100%" src="/modules/base/images/pet-content.png" />
+		</div>
+	</body>
+</html>

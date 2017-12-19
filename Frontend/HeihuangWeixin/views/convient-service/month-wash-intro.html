@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>包月洗车</title>
+		<link href="/modules/base/css/common.css" rel="stylesheet" type="text/css">
+		<link href="/modules/convenient-service/css/convenient-service.css" rel="stylesheet" type="text/css">
+		<link href="/components/swiper/swiper-3.3.1.min.css" rel="stylesheet" type="text/css">
+
+	</head>
+
+	<body class="padding-side border-box has-fixed-ele scroll-y double-bg">
+		<div class="shopping-car flex">
+			<div class="circle bg no-repeat">
+				<a class="orders flex items-center justify-center no-display">0</a>
+			</div>
+			<div class="circle bg no-repeat service-group"></div>
+			<ul class="shadow flex contack">
+				<li>
+					<a href="tel:4008015560"><img src="/modules/base/images/phone.png"></a>
+				</li>
+				<li>
+					<a th:href="@{/weixin/pageUserManageIndexById(userId=${userId})}"><img src="/modules/base/images/person.png"></a>
+				</li>
+			</ul>
+		</div>
+		<div class="container">
+			<article class="text-bg no-repeat">
+				<h1 class="wash-bg flex items-center justify-center">包月洗车<span class="center-mark block"></span><span class="lightalternate">Car Wash</span></h1>
+				<div class="swiper-container shadow">
+					<div class="swiper-wrapper radius">
+						<div class="swiper-slide"><img src="/modules/convenient-service/images/car3.jpg">
+						</div>
+						<div class="swiper-slide"><img src="/modules/convenient-service/images/car2.jpg">
+						</div>
+						<div class="swiper-slide"><img src="/modules/convenient-service/images/car1.jpg">
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<div>
+					<h2 class="flex items-center"><div class="circle bg service-bg no-repeat icon service-bg"></div>服务介绍<span class="center-mark block"></span><span class="lightalternate">Car Wash</span></h2>
+					<p>
+						定期清洗套餐，每月赠送内饰清洗，中高频率用车人士首选。
+					</p>
+				</div>
+				<div>
+					<h2 class="flex items-center"><div class="circle bg no-repeat icon car-bg"></div>轿车包月介绍<span class="center-mark block"></span><span class="lightalternate">Car Wash</span></h2>
+					<div class="border radius flex items-width-euqal items-center">
+						<div class="flex-grow">
+							轿车包月套餐
+						</div>
+						<div class="flex-grow">
+							轿车清洗频率
+						</div>
+						<div class="flex-grow">
+							包月套餐价格
+						</div>
+					</div>
+					<div class="border radius flex items-width-euqal items-center">
+						<div class="flex-grow">
+							包月套餐一
+							<br>
+							(含4次内饰清洗)
+						</div>
+						<div class="flex-grow">
+							每日一洗
+						</div>
+						<div class="flex-grow">
+							228元
+						</div>
+					</div>
+					<div class="border radius flex items-width-euqal items-center">
+						<div class="flex-grow">
+							包月套餐二
+							<br>
+							(含3次内饰清洗)
+						</div>
+						<div class="flex-grow">
+							三日一洗
+						</div>
+						<div class="flex-grow">
+							158元
+						</div>
+					</div>
+					<div class="border radius flex items-width-euqal items-center">
+						<div class="flex-grow">
+							包月套餐三
+							<br>
+							(含1次内饰清洗)
+						</div>
+						<div class="flex-grow">
+							五日一洗
+						</div>
+						<div class="flex-grow">
+							108元
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2 class="flex items-center"><div class="circle bg no-repeat icon suv-bg"></div>SUV包月介绍<span class="center-mark block"></span><span class="lightalternate">Car Wash</span></h2>
+					<div class="border radius flex items-width-euqal items-center">
+						<div class="flex-grow">
+							SUV包月套餐
+						</div>
+						<div class="flex-grow">
+							车辆清洗频率
+						</div>
+						<div class="flex-grow">
+							包月套餐价格
+						</div>
+					</div>
+					<div class="border radius flex items-width-euqal items-center">
+						<div class="flex-grow">
+							包月套餐一
+							<br>
+							(含4次内饰清洗)
+						</div>
+						<div class="flex-grow">
+							每日一洗
+						</div>
+						<div class="flex-grow">
+							258元
+						</div>
+					</div>
+					<div class="border radius flex items-width-euqal items-center">
+						<div class="flex-grow">
+							包月套餐二
+							<br>
+							(含3次内饰清洗)
+						</div>
+						<div class="flex-grow">
+							三日一洗
+						</div>
+						<div class="flex-grow">
+							178元
+						</div>
+					</div>
+					<div class="border radius flex items-width-euqal items-center">
+						<div class="flex-grow">
+							包月套餐三
+							<br>
+							(含1次内饰清洗)
+						</div>
+						<div class="flex-grow">
+							五日一洗
+						</div>
+						<div class="flex-grow">
+							128元
+						</div>
+					</div>
+
+				</div>
+				<div>
+					温馨提醒：尊敬的业主
+					<br>
+					为了不影响您的出行我们将作业时间安排在当日19:00至次日7:00如需当日清洗内饰，请拨打客服电话：<span class="service-num">400~801~5560</span>
+				</div>
+			</article>
+
+		</div>
+		<div class="fixed-bottom border-box flex justify-center items-center">
+			<a th:href="@{/weixin/pageMonthOrderFill(userId=${userId}, villeage=${villeage})}" class="block">立即购买</a>
+		</div>
+		<script type="text/javascript" src="/lib/mod.js"></script>
+		<!--SCRIPT_PLACEHOLDER-->
+
+		<script type="text/javascript">
+			require("/modules/convenient-service/js/month-wash-intro");
+		</script>
+	</body>
+</html>

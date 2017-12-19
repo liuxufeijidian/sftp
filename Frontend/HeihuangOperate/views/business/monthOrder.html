@@ -1,0 +1,102 @@
+<link rel="stylesheet" type="text/css" href="/components/parsley/parsley.css" />
+<link rel="stylesheet" type="text/css" href="/components/datetimepicker/bootstrap-datetimepicker.css" />
+<!-- widget grid -->
+<section id="widget-grid" class="">
+	<!-- row -->
+	<div class="row">
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<table id="jqgrid"></table>
+			<div id="pjqgrid"></div>
+		</article>
+		<!-- WIDGET END -->
+	</div>
+	<!-- end row -->
+</section>
+<div id="updateUserCarWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="updateUserCarForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">车牌号</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="plate" required="">
+				</label>
+			</section>
+			<section>
+				<label class="label">车位</label>
+				<label class="select"> <select class="input-sm" name="parkArea" required=""></select><i></i> </label>
+			</section>
+			<section>
+				<label class="label">车型</label>
+				<label class="select">
+					<select class="input-sm" name="carType">
+						<option value="SUV">SUV</option>
+						<option value="轿车">轿车</option>
+					</select> <i></i> </label>
+				<input type="hidden" name="userId" />
+				<input type="hidden" name="id" />
+			</section>
+		</fieldset>
+	</form>
+</div>
+
+<div id="updateUserWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="updateUserForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">订单状态</label>
+				<label class="select">
+					<input type="hidden" name="id" />
+					<select class="input-sm" name="orderStatus" required="">
+						<option value="2">已支付</option>
+						<option value="3">服务结束</option>
+					</select><i></i> </label>
+			</section>
+			<section>
+				<label class="label">初次服务时间</label>
+				<label class="input">
+					<input class="input-xs form_datetime" name="firstServiceTime" type="text" >
+				</label>
+			</section>
+			<section>
+				<label class="label">到期时间</label>
+				<label class="input">
+					<input class="input-xs form_datetime" name="endTime" type="text" >
+				</label>
+			</section>
+			<section>
+				<label class="label">包月个数</label>
+				<label class="input">
+					<input class="input-xs" name="payMonth" type="text">
+				</label>
+			</section>
+			<section>
+				<label class="label">剩余内饰清洗次数</label>
+				<label class="input">
+					<input class="input-xs" name="insideWashCount" type="text">
+				</label>
+			</section>
+			<section>
+				<label class="label">车库</label>
+				<label class="select"> <select class="input-sm" name="parkArea" required=""></select><i></i> </label>
+			</section>
+			<section>
+				<label class="label">车位</label>
+				<label class="input">
+					<input class="input-xs" name="parkNo" type="text" value="1">
+				</label>
+			</section>
+			<section class="col-50">
+				<label class="label"></label>
+				<label class="toggle">
+					<input type="checkbox" name="pause" checked="checked" value="0">
+					<i data-swchon-text="是" data-swchoff-text="否"></i>是否暂停</label>
+			</section>
+		</fieldset>
+	</form>
+</div>
+
+<script type="text/javascript" src="/lib/mod_ajax.js"></script>
+<section id="scriptTag"></section>
+<!--SCRIPT_PLACEHOLDER-->
+<script type="text/javascript">require.async("/modules/business/monthOrder");</script><!--ignore-->

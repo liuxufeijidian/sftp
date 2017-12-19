@@ -1,0 +1,80 @@
+<link rel="stylesheet" type="text/css" href="/components/parsley/parsley.css" />
+<!-- widget grid -->
+<section id="widget-grid" class="">
+	<!-- row -->
+	<div class="row">
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<table id="jqgrid"></table>
+			<div id="pjqgrid"></div>
+		</article>
+		<!-- WIDGET END -->
+	</div>
+	<!-- end row -->
+</section>
+<div id="updateUserCarWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="updateUserCarForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">车牌号</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="plate" required="">
+				</label>
+			</section>
+			<section>
+				<label class="label">车位</label>
+				<label class="select">
+					<select class="input-sm" name="parkArea" required="">
+					</select><i></i>
+				</label>
+			</section>
+			<section>
+				<label class="label">车型</label>
+				<label class="select">
+					<select class="input-sm" name="carType">
+						<option value="SUV">SUV</option>
+						<option value="轿车">轿车</option>
+					</select> <i></i> </label>
+				<input type="hidden" name="userId" />
+				<input type="hidden" name="id" />
+			</section>
+		</fieldset>
+	</form>
+</div>
+<!--do  -->
+<div id="updateUserWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="updateUserForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">投诉内容</label>
+				<label class="">
+					<label class="input">
+						<input type="hidden" name="id" id="id" class="input-xs form-control" required="">
+						<input type="text" name="complainContent" id="complainContent" class="input-xs form-control" required="">
+					</label>
+				</label>
+			</section>
+			<section>
+					<label class="label">回复内容</label>
+					<label class="input">
+						<input type="text" name="replyContent" id="replyContent" class="input-xs form-control" required="">
+					</label>
+				</section>
+				
+			<section>
+					<label class="label">回复人</label>
+					<label class="input">
+						<input type="text" name="replyName" id="replyName" class="input-xs form-control" required="">
+					</label>
+				</section>
+				
+			
+		</fieldset>
+	</form>
+</div>
+<script type="text/javascript" src="/lib/mod_ajax.js"></script>
+<section id="scriptTag"></section>
+<!--SCRIPT_PLACEHOLDER-->
+<script type="text/javascript">
+	require.async("/modules/business/tousu");
+</script><!--ignore-->

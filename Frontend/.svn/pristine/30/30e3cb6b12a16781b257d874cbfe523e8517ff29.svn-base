@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>小区选择</title>
+		<link href="/modules/base/css/common.css" rel="stylesheet" type="text/css">
+		<link href="/modules/convenient-service/css/convenient-service.css" rel="stylesheet" type="text/css">
+		<link href="/modules/convenient-service/css/channel-select.css" rel="stylesheet" type="text/css">
+
+	</head>
+	<body class="border-box cornor-bg">
+
+		<div class="channel-select">
+			<a th:href="@{/weixin/pageIndexById(userId=${userId})}" class="block" th:inline="text">[[${villeageName}]]&nbsp;></a>
+			<div class="pos-group">
+				<div class="pos-center-logo no-repeat"></div>
+				<div class="bg pos-center no-repeat">
+
+					<div class="flex items-center">
+						<div class="bg flex-grow line"></div>
+						<div class="bg pos-side border-box flex-shrink">
+							<a href="#" class="reverse-rotate no-repeat flex items-center justify-center" onclick="alert('暂未开放')"> 业主俱乐部 </a>
+						</div>
+					</div>
+					<div class="flex items-center">
+						<div class="bg flex-grow line"></div>
+						<div class="bg pos-side border-box flex-shrink">
+							<a th:href="@{/weixin/pageUserManageIndexById(userId=${userId})}" class="reverse-rotate no-repeat flex items-center justify-center"  > 个人中心</a>
+						</div>
+					</div>
+					<div class="flex items-center">
+						<div class="bg flex-grow line"></div>
+						<div class="bg pos-side border-box flex-shrink">
+							<a href="#" class="reverse-rotate no-repeat flex items-center justify-center" onclick="alert('暂未开放')" > 小区公告 </a>
+						</div>
+					</div>
+					<div class="flex items-center">
+						<div class="bg flex-grow line"></div>
+						<div class="bg pos-side border-box flex-shrink">
+							<a th:href="@{/weixin/pagePetManageIndex(userId=${userId})}" class="reverse-rotate no-repeat flex items-center justify-center" > 宠物管家 </a>
+						</div>
+					</div>
+					<div class="flex items-center">
+						<div class="bg flex-grow line"></div>
+						<div class="bg pos-side border-box flex-shrink">
+							<a th:href="@{/weixin/pageCarManageIndex(userId=${userId},villeage=${villeage})}" class="reverse-rotate no-repeat flex items-center justify-center" > 汽车管家</a>
+						</div>
+					</div>
+					<div class="flex items-center">
+						<div class="bg flex-grow line"></div>
+						<div class="bg pos-side border-box flex-shrink">
+							<a href="#" onclick="alert('暂未开放')" class="reverse-rotate no-repeat flex items-center justify-center" > 商<span class="center-mark"></span>城</a>
+						</div>
+					</div>
+					<div class="flex items-center">
+						<div class="bg flex-grow line"></div>
+						<div class="bg pos-side border-box flex-shrink">
+							<a href="#" class="reverse-rotate no-repeat flex items-center justify-center" > </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<input type="hidden" id="villegeId" th:value="${villeage}" />
+		<input type="hidden" id="userId" th:value="${userId}" />
+		<script type="text/javascript" src="/lib/mod.js"></script>
+		<!--SCRIPT_PLACEHOLDER-->
+		<script type="text/javascript">
+			require("/modules/convenient-service/js/channel-select");
+		</script>
+
+	</body>
+</html>

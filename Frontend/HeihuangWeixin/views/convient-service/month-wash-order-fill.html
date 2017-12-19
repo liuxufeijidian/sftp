@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>包月洗车</title>
+		<link href="/modules/base/css/common.css" rel="stylesheet" type="text/css">
+		<link href="/modules/convenient-service/css/convenient-service.css" rel="stylesheet" type="text/css">
+		<link href="/components/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+		<link href="/components/sweetalert/swal-forms.css" rel="stylesheet" type="text/css">
+	</head>
+	<body class="padding-side border-box has-fixed-ele ">
+		<div class="container">
+			<form class="order-fill">
+				<div class="flex">
+					<div class="flex radius fixed-height shadow items-center bg border-box flex-grow equal-width">
+						<div class="fill-title">
+							车牌
+						</div>
+						<select name="plate" class="block flex-grow fill-content">
+							<option th:each="car : ${userCar}" th:text="${car.plate}" th:attr="carId=${car.id}, carType=${car.carType},parkArea=${car.parkArea}"></option>
+						</select>
+						<input type="hidden" name="userCarId"/>
+					</div>
+					<div class="flex radius fixed-height shadow items-center border-box flex-grow border equal-width hidden-overflow car-wrapper">
+						<div class="flex-grow equal-width car-type flex items-center justify-center">
+							轿车
+							<input type="radio" name="carType" checked value="轿车">
+						</div>
+						<div class="flex-grow equal-width car-type flex items-center justify-center">
+							SUV
+							<input type="radio" name="carType" value="SUV">
+						</div>
+					</div>
+				</div>
+				<div class="flex">
+					<div class="flex radius fixed-height shadow items-center bg border-box flex-grow equal-width">
+						<div class="fill-title">
+							小区
+						</div>
+						<input type="text" name="villeage" th:value="${villeageName}" class="block flex-grow fill-content" readonly="">
+						<input type="hidden" name="villeageId" th:value="${villeage}" class="block flex-grow fill-content" readonly="">
+					</div>
+					<div class="flex radius fixed-height shadow items-center bg border-box flex-grow equal-width">
+						<div class="fill-title">
+							车库
+						</div>
+						<select class="fill-content flex-grow" name="parkArea">
+							<option th:each="parkArea : ${parkAreas}" th:value="${parkArea.id}" th:text="${parkArea.constDesc}">A区</option>
+						</select>
+						<input type="hidden" name="userCarPosition" />
+					</div>
+				</div>
+				<div class="flex">
+					<div class="flex radius fixed-height shadow items-center border-box flex-grow equal-width bg">
+						<div class="fill-title">
+							车位
+						</div>
+						<input type="text" name="carPosition" class="block flex-grow fill-content">
+					</div>
+					<div class="flex radius fixed-height shadow items-center border-box flex-grow equal-width bg justify-center" id="add-car">
+						添加车辆信息
+					</div>
+					
+				</div>
+				<div class="flex">
+					<div class="flex radius fixed-height shadow items-center bg border-box flex-grow equal-width">
+						<div class="fill-title">
+							套餐类型
+						</div>
+						<select class="fill-content flex-grow" name="orderType">
+							<option value="0">每日一洗</option>
+							<option value="1">三日一洗</option>
+							<option value="2">五日一洗</option>
+						</select>
+					</div>
+				</div>
+				<div class="flex">
+					<div class="flex radius fixed-height shadow items-center border-box flex-grow equal-width bg">
+						<div class="fill-title">
+							房号
+						</div>
+						<input type="text" name="roomNo" class="block flex-grow fill-content" th:value="${user.roomNo}">
+					</div>
+					<div class="flex radius fixed-height shadow items-center border-box flex-grow equal-width bg">
+						<div class="fill-title">
+							电话
+						</div>
+						<input type="tel" name="mobile" class="block flex-grow fill-content" th:value="${user.mobile}">
+					</div>
+				</div>
+				<div class="flex">
+					<div class="flex radius fixed-height shadow items-center bg border-box flex-grow">
+						<div class="fill-title">
+							初次服务时间
+						</div>
+						<input type="date" name="firstServiceTime" class="block flex-grow fill-content">
+					</div>
+				</div>
+				<div class="flex">
+					<div class="flex radius fixed-height shadow items-center bg border-box flex-grow equal-width">
+						<div class="fill-title">
+							服务时限
+						</div>
+						<select class="fill-content flex-grow" name="payMonth">
+							<option value="1">一个月</option>
+							<option value="2">二个月</option>
+							<option value="3">三个月</option>
+						</select>
+					</div>
+					<div class="flex radius fixed-height shadow items-center border-box flex-grow equal-width bg">
+						<div class="fill-title">
+							内饰清洗
+						</div>
+						<select class="fill-content flex-grow" name="insideWashType">
+							<option value="0">系统默认</option>
+							<option value="1">手动分配</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="flex remark">
+					<div class="flex radius shadow bg border-box flex-grow">
+						<div class="">
+							备注：
+						</div>
+						<textarea type="text" name="remark" class="block flex-grow border-box"></textarea>
+					</div>
+				</div>
+				<div class="flex">
+					<div class="flex radius fixed-height shadow items-center bg border-box flex-grow">
+						<div class="fill-title">
+							优惠卷
+						</div>
+						<select class="fill-content flex-grow" name="couponId">
+							<option th:each="coupon : ${coupons}" th:value="${coupon.id}" th:attr="couponVal=${coupon.discountValue},couponType=${coupon.discountType}" th:text="${coupon.discountType} == 0 ? ${coupon.discountValue} + '元' : ${coupon.discountValue} + '折'"></option>
+						</select>
+					</div>
+				</div>
+				<input type="hidden" name="payPrice" />
+				<input type="hidden" name="insideWashCount" />
+				<input type="hidden" name="userId" th:value="${userId}" />
+				<input type="hidden" name="villeageId" th:value="${villeage}" />
+				<div class="align-right">
+					共1件商品&nbsp;合计：￥<span class="total">0.00</span>
+				</div>
+
+			</form>
+			<input type="hidden" id="openId" th:value="${user.openId}" />
+			<div class="fixed-bottom border-box flex justify-center items-center">
+				<a href="#" class="submit block">立即购买</a>
+			</div>
+		</div>
+		<script type="text/javascript" src="/lib/mod.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<!--SCRIPT_PLACEHOLDER-->
+		<script type="text/javascript">
+			require("/modules/convenient-service/js/month-wash-order-fill");
+		</script>
+
+	</body>
+</html>

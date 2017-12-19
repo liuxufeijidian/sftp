@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>上门美宠</title>
+		<link href="/modules/base/css/common.css" rel="stylesheet" type="text/css">
+		<link href="/modules/convenient-service/css/convenient-service.css" rel="stylesheet" type="text/css">
+
+	</head>
+
+	<body class="padding-side border-box has-fixed-ele scroll-y double-bg">
+		<div class="shopping-car flex">
+			<div class="circle bg no-repeat">
+				<a class="orders flex items-center justify-center no-display">0</a>
+			</div>
+			<div class="circle bg no-repeat service-group">  
+          </div>
+          <ul class="shadow flex contack">
+                     <li><a href="tel:4008015560"><img src="/modules/base/images/phone.png"></a></li>
+                     <li><a th:href="@{/weixin/pageUserManageIndexById(userId=${userId})}"><img src="/modules/base/images/person.png"></a></li>
+           </ul>
+		</div>
+		<div class="container">
+			<article class="intro-spec intro-list">
+				<div class="poster pet-manager-intro" style="margin-bottom:10px"><img src="/modules/base/images/poster.png">
+				</div>
+				<h1 class="flex items-center justify-center" ><span class="center-mark block"></span>宠物管家<span class="center-mark"></span></h1>
+				<div>
+					<h2 class="flex items-center"><div class="no-repeat icon paw-bg"></div>宠物洗澡</h2>
+					<div>
+						<div>
+							<p>
+								小型犬（3kg以下）<b>40元起</b>
+							</p>
+							<p>
+								中型犬（3kg-10kg）<b>60元起</b>
+							</p>
+						</div>
+						<ul class="dot-ul">
+							<li class="flex items-center">
+								<div></div><span class="center-mark"></span>外观、被毛、皮肤
+							</li>
+							<li class="flex items-center">
+								<div></div><span class="center-mark"></span>鼻子、眼镜
+							</li>
+							<li class="flex items-center">
+								<div></div><span class="center-mark"></span>四肢
+							</li>
+							<li class="flex items-center">
+								<div></div><span class="center-mark"></span>体型
+							</li>
+							<li class="flex items-center">
+								<div></div><span class="center-mark"></span>耳朵
+							</li>
+							<li class="flex items-center">
+								<div></div><span class="center-mark"></span>肛门腺
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div>
+					<h2 class="flex items-center"><div class="no-repeat icon paw-bg"></div>宠物盐浴</h2>
+					<div>
+						<div>
+							<p>
+								小型犬（3kg以下）<b>60元起</b>
+							</p>
+							<p>
+								中型犬（3kg-10kg）<b>80元起</b>
+							</p>
+						</div>
+						<div>
+							<p>
+								项目介绍：
+							</p>
+							<p>
+								迷迭香、黄菊花、椰香、玫瑰、
+							</p>
+							<p>
+								麝香、薄荷等味道
+							</p>
+						</div>
+						<ul class="dot-ul">
+							<li class="flex items-center">
+								<div></div><span class="center-mark"></span>精心洗护
+							</li>
+							<li class="flex items-center">
+								<div></div><span class="center-mark"></span>涂抹泥浴
+							</li>
+							<li class="flex items-center">
+								<div></div><span class="center-mark"></span>舒缓按摩
+							</li>
+							<li class="flex items-center">
+								<div></div><span class="center-mark"></span>细心洗净
+							</li>
+							<li class="flex items-center">
+								<div></div><span class="center-mark"></span>擦拭
+							</li>
+							<li class="flex items-center">
+								<div></div><span class="center-mark"></span>梳理毛发
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div>
+					<h2 class="flex items-center"><div class="no-repeat icon paw-bg"></div>洁&nbsp;牙</h2>
+					<div>
+						<div>
+							<p>
+								收费价格：<b>288元</b>
+							</p>
+						</div>
+						<div>
+							<p>
+								项目介绍：
+							</p>
+							<p>
+								采用德国普缇康Probiotik
+							</p>
+							<p>
+								明星洁牙套餐产品，天然活性
+							</p>
+							<p>
+								益生菌，不手术，不麻醉
+							</p>
+							<p>
+								全程无痛护理。
+							</p>
+						</div>
+						<div>
+							<p>
+								解决口臭困扰，清理牙结石，
+							</p>
+							<p>
+								防止牙龈萎缩，牙齿亮晶晶。
+							</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2 class="flex items-center"><div class="no-repeat icon paw-bg"></div>泥浴SPA</h2>
+					<div>
+						<div>
+							<p>
+								小型犬（3kg以下）<b>60元起</b>
+							</p>
+							<p>
+								中型犬（3kg-10kg）<b>80元起</b>
+							</p>
+						</div>
+						<div>
+							<p>
+								抚养泥浴功效：
+							</p>
+							<p>
+								使用贝特爱斯品牌抚养泥，深层滋养犬的皮肤及毛发，让受损毛发回复弹性和光亮。
+							</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2 class="flex items-center"><div class="no-repeat icon paw-bg"></div>药&nbsp;浴</h2>
+					<div>
+						<div>
+							<p>
+								小型犬（3kg以下）<b>15元起</b>
+							</p>
+							<p>
+								中型犬（3kg-10kg）<b>50元起</b>
+							</p>
+						</div>
+						<div>
+							<p>
+								药浴功效：
+							</p>
+							<p>
+								有效治疗宠物皮肤病，祛除跳蚤，防止外来病源入侵。
+							</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2 class="flex items-center"><div class="no-repeat icon paw-bg"></div>刷&nbsp;牙</h2>
+					<div>
+						<div>
+							<p>
+								功效：
+							</p>
+							<p>
+								短时间内解决口臭困扰，叨叨牙齿洗护合一的目的。
+							</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2 class="flex items-center"><div class="no-repeat icon paw-bg"></div>毛发增色（包含洗澡）</h2>
+					<div>
+						<div>
+							<p>
+								收费价格：<b>100元</b>
+							</p>
+						</div>
+						<div>
+							<p>
+								功效：
+							</p>
+							<p>
+								使用天然无刺激宠物增色产品，为爱宠皮毛增色，恢复皮毛亮丽色泽，不再为皮毛掉色而烦恼。
+							</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2 class="flex items-center"><div class="no-repeat icon paw-bg"></div>开结</h2>
+					<div>
+						<div>
+							<p>
+								收费价格：<b>15-30元</b>（根据价格）
+							</p>
+						</div>
+						<div>
+							<p>
+								功效：
+							</p>
+							<p>
+								使用专业工具疏开宠物身上的死结
+							</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h2 class="flex items-center"><div class="no-repeat icon paw-bg"></div>贵宾脚+修脸</h2>
+					<div>
+						<div>
+							<p>
+								收费价格：<b>20</b>
+							</p>
+						</div>
+						<div>
+							<p>
+								功效：
+							</p>
+							<p>
+								精致打理宠物的足部和面部
+							</p>
+						</div>
+					</div>
+				</div>
+			</article>
+
+		</div>
+		<div class="fixed-bottom border-box flex justify-center items-center">
+			<a th:href="@{/weixin/pagePetOrderFill(userId=${userId})}" class="block">立即预约</a>
+		</div>
+		<script type="text/javascript" src="/lib/mod.js"></script>
+		<!--SCRIPT_PLACEHOLDER-->
+
+		<script type="text/javascript">
+			require("/modules/convenient-service/js/pet-manager-intro");
+		</script>
+
+	</body>
+</html>

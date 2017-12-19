@@ -1,0 +1,32 @@
+<link rel="stylesheet" type="text/css" href="/components/parsley/parsley.css" />
+<link rel="stylesheet" type="text/css" href="/components/datetimepicker/bootstrap-datetimepicker.css" />
+<!-- widget grid -->
+<section id="widget-grid" class="">
+	<!-- row -->
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="alert alert-block alert-success" style="height: 88px">
+				<h4 class="alert-heading">排班生成</h4>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control form_datetime" placeholder="请选择生成日期" id="generateDate">
+					</div>
+					<button class="btn btn-default" id="generate-btn">
+						生成
+					</button>
+				</form>
+			</div>
+		</div>
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<table id="jqgrid"></table>
+			<div id="pjqgrid"></div>
+		</article>
+		<!-- WIDGET END -->
+	</div>
+	<!-- end row -->
+</section>
+<script type="text/javascript" src="/lib/mod_ajax.js"></script>
+<section id="scriptTag"></section>
+<!--SCRIPT_PLACEHOLDER-->
+<script type="text/javascript">require.async("/modules/business/task");</script><!--ignore-->

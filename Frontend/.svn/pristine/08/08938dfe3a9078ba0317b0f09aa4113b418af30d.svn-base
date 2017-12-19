@@ -1,0 +1,92 @@
+<link rel="stylesheet" type="text/css" href="/components/parsley/parsley.css" />
+<link rel="stylesheet" type="text/css" href="/components/datetimepicker/bootstrap-datetimepicker.css" />
+<!-- widget grid -->
+<section id="widget-grid" class="">
+	<!-- row -->
+	<div class="row">
+		<!-- NEW WIDGET START -->
+		<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<table id="jqgrid"></table>
+			<div id="pjqgrid"></div>
+		</article>
+		<!-- WIDGET END -->
+	</div>
+	<!-- end row -->
+</section>
+<div id="addCouponWindow" style="overflow-x: hidden">
+	<form class="smart-form" id="addCouponForm" data-parsley-validate>
+		<fieldset>
+			<section>
+				<label class="label">优惠券兑换码</label>
+				<label class="input">
+					<input type="text" class="input-xs couponCode" name="couponCode" required="" readonly="readonly">
+				</label>
+			</section>
+			<section>
+				<label class="label">优惠券类型</label>
+				<label class="select">
+					<select class="input-sm" name="couponType">
+						<option value="0">通用优惠券</option>
+						<option value="1">单次洗车</option>
+						<option value="2">包月洗车</option>
+						<option value="3">次卡洗车</option>
+						<option value="4">汽车美容</option>
+						<option value="5">宠物管家</option>
+					</select> <i></i> </label>
+			</section>
+			<section>
+				<label class="label">优惠方式</label>
+				<label class="select">
+					<select class="input-sm" name="discountType" class="discountType">
+						<option value="0">现金</option>
+						<option value="1">打折</option>
+					</select> <i></i> </label>
+			</section>
+			<section>
+				<label class="label">折扣额度</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="discountValue" required="">
+				</label>
+			</section>
+			<section class="maxDiscountSec" style="display: none">
+				<label class="label">最高折扣价</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="maxDiscount" value="0" required="">
+				</label>
+			</section>
+			<section>
+				<label class="label">数量</label>
+				<label class="input">
+					<input type="text" class="input-xs" name="number" required="">
+				</label>
+			</section>
+			<section>
+				<label class="label">适用小区</label>
+				<label class="select">
+					<select class="input-xs" name="villeage" id="villeageName" required=""></select><i></i>
+				</label>
+			</section>
+			<section>
+				<label class="label">过期时间</label>
+				<label class="input">
+					<input type="text" class="input-xs expireTime" name="expireTime" required="">
+				</label>
+			</section>
+		</fieldset>
+	</form>
+</div>
+<div id="allotWindow">
+	<form class="smart-form" id="allotCouponForm" data-parsley-validate>
+		<section>
+			<label class="label">选择小区</label>
+			<label class="select">
+				<select class="input-sm" name="villeage" id="villeage">
+				</select> <i></i> </label>
+		</section>
+		<input type="hidden" id="couponId" />
+	</form>
+</div>
+<script type="text/javascript" src="/lib/mod_ajax.js"></script>
+<section id="scriptTag"></section>
+<!--SCRIPT_PLACEHOLDER-->
+<script type="text/javascript">require.async("/modules/business/coupon");</script><!--ignore-->

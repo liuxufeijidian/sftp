@@ -1,0 +1,151 @@
+<link rel="stylesheet" type="text/css" href="/components/parsley/parsley.css" />
+<!-- widget grid -->
+<section id="widget-grid" class="">
+	 <div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="alert alert-block alert-success" style="height: 88px">
+				<h4 class="alert-heading">条件查询</h4>
+				<form class="navbar-form navbar-left" role="search">
+			        <div class="form-group">
+			          <input type="text" class="form-control" placeholder="请输入回复人的姓名" id="desc">
+			        </div>
+			        <button type="submit" class="btn btn-default" id="search-btn">搜索</button>
+			      </form>
+			</div>
+		</div>
+	</div> 
+	<!-- row -->
+	<div class="row">
+			<!-- NEW WIDGET START -->
+			<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sortable-grid ui-sortable" id="gridt">
+				<table id="type-jqgrid"></table><!--列表  -->
+				<div id="type-pjqgrid"></div><!--分页  -->
+			</article>
+			
+			<!-- <!-- NEW WIDGET START
+			<article class="col-xs-12 col-sm-6 col-md-6 col-lg-6 sortable-grid ui-sortable" id="gridv">
+			<table id="val-jqgrid"></table>
+			<div id="val-pjqgrid"></div>
+			</article> -->
+	</div>
+	<!-- end row -->
+</section>
+
+<div id="addTypeWindow">
+	<fieldset>
+		<form class="form-inline smart-form" id="addTypeForm" data-parsley-validate>
+			<fieldset class="mySet" style="padding: 5px 14px 5px !important;background: none">
+				<section>
+					<label class="label">短信内容</label>
+					<label class="input">
+						<input type="text" name="content" class="input-xs form-control" required="">
+					</label>
+				</section>
+				<!-- <section>
+					<label class="label">回复内容</label>
+					<label class="input">
+						<input type="text" name="replyContent" class="input-xs form-control" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">回复人</label>
+					<label class="input">
+						<input type="text" name="replyName" class="input-xs form-control" required="">
+					</label>
+				</section> -->
+			</fieldset>
+		</form>
+	</fieldset>
+</div>
+<!--编辑投诉窗口  -->
+<div id="editTypeWindow">
+	<fieldset>
+		<form class="form-inline smart-form" id="editTypeForm" data-parsley-validate>
+			<fieldset class="mySet" style="padding: 5px 14px 5px !important;background: none">
+				<section>
+					<label class="label">投诉内容</label>
+					<label class="input">
+						<input type="hidden" name="id" id="id" class="input-xs form-control" required="">
+						<input type="text" name="complainContent" id="complainContent" class="input-xs form-control" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">回复内容</label>
+					<label class="input">
+						<input type="text" name="replyContent" id="replyContent" class="input-xs form-control" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">回复人</label>
+					<label class="input">
+						<input type="text" name="replyName" id="replyName" class="input-xs form-control" required="">
+					</label>
+				</section>
+			</fieldset>
+		</form>
+	</fieldset>
+</div>
+
+<div id="addContWindow">
+	<fieldset>
+		<form class="form-inline smart-form" id="addConstForm" data-parsley-validate>
+			<fieldset class="mySet" style="padding: 5px 14px 5px !important;background: none">
+				<input type="hidden" id="constTypeId" name="constTypeId" class="input-xs form-control">
+				<input type="hidden" name="upperValueId" class="input-xs form-control">
+				<section>
+					<label class="label">静态值</label>
+					<label class="input">
+						<input type="text" name="constValue" class="input-xs form-control" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">静态值描述</label>
+					<label class="input">
+						<input type="text" name="constDesc" class="input-xs form-control" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">回复人</label>
+					<label class="input">
+						<input type="text" name="sort" class="input-xs form-control" required="">
+					</label>
+				</section>
+				<input type="hidden" name="dataValue" class="input-xs form-control">
+			</fieldset>
+		</form>
+	</fieldset>
+</div>
+<div id="editContWindow">
+	<fieldset>
+		<form class="form-inline smart-form" id="editConstForm" data-parsley-validate>
+			<fieldset class="mySet" style="padding: 5px 14px 5px !important;background: none">
+				<input type="hidden" name="constTypeId" class="input-xs form-control">
+				<input type="hidden" id="id" name="id" class="input-xs form-control">
+				<section>
+					<label class="label">静态值</label>
+					<label class="input">
+						<input type="text" name="constValue" id="constValue" class="input-xs form-control" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">静态值描述</label>
+					<label class="input">
+						<input type="text" name="constDesc" id="constDesc" class="input-xs form-control" required="">
+					</label>
+				</section>
+				<section>
+					<label class="label">排序</label>
+					<label class="input">
+						<input type="text" name="sort" id="sort" class="input-xs form-control" required="">
+					</label>
+				</section>
+			</fieldset>
+		</form>
+	</fieldset>
+</div>
+<script type="text/javascript" src="/lib/mod.js"></script>
+<section id="scriptTag"></section>
+<!--SCRIPT_PLACEHOLDER-->
+<script type="text/javascript">
+	require.async("/modules/business/tousu");
+</script>

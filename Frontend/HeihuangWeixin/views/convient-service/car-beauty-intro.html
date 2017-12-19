@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>汽车美容</title>
+		<link href="/modules/base/css/common.css" rel="stylesheet" type="text/css">
+		<link href="/modules/convenient-service/css/convenient-service.css" rel="stylesheet" type="text/css">
+
+	</head>
+
+	<body class="padding-side border-box has-fixed-ele scroll-y">
+		<div class="shopping-car flex border-box fixed-top items-center justify-right">
+			<div class="circle bg no-repeat">
+				<a class="orders flex items-center justify-center no-display">0</a>
+			</div>
+			<div class="circle bg no-repeat service-group"></div>
+			<ul class="shadow flex contack">
+				<li>
+					<a href="tel:4008015560"><img src="/modules/base/images/phone.png"></a>
+				</li>
+				<li>
+					<a th:href="@{/weixin/pageUserManageIndexById(userId=${userId})}"><img src="/modules/base/images/person.png"></a>
+				</li>
+			</ul>
+		</div>
+		<div class="container">
+			<article class="intro-spec">
+				<div>
+					<h2 class="flex items-center shadow bg radius"><span>内饰清洗</span><span class="center-mark block"></span>280元</h2>
+					<p>
+						采用专用内饰清洁剂，使用不同规格的清洁毛刷及毛巾，洁净，保养内饰。
+					</p>
+				</div>
+				<div>
+					<h2 class="flex items-center shadow bg radius"><span>座垫清洗</span><span class="center-mark block"></span>120元</h2>
+					<p>
+						采用专用内饰清洁剂，使用不同规格的清洁毛刷及毛巾，洁净，保养内饰。
+					</p>
+				</div>
+				<div>
+					<h2 class="flex items-center shadow bg radius"><span>玻璃除胶</span><span class="center-mark block"></span>80元</h2>
+					<p>
+						使用含有13种除胶成分开发的玻璃专用除胶剂，清除玻璃上的顽固胶迹。
+					</p>
+				</div>
+				<div>
+					<h2 class="flex items-center shadow bg radius"><span>清洗虫胶</span><span class="center-mark block"></span>30元</h2>
+					<p>
+						一次性解决清除虫胶问题，还您洁净爱车。
+					</p>
+				</div>
+				<div>
+					<h2 class="flex items-center shadow bg radius"><span>手工打蜡轿车</span><span class="center-mark block"></span>轿车100&nbsp;SUV120</h2>
+			<p>
+						在车漆表面形成保护膜，起到上光，防水，防静电等作用，保护爱车漆面。
+					</p>
+				</div>
+				
+				<div>
+					<h2 class="flex items-center shadow bg radius"><span>深度清洗玻璃</span><span class="center-mark block"></span>30元</h2>
+					<p>
+						采用专用油膜消除剂，研磨清除油膜彻底除油膜，还原汽车玻璃的透明亮度。
+					</p>
+				</div>
+				<div>
+					<h2 class="flex items-center shadow bg radius"><span>发动机舱清洗</span><span class="center-mark block"></span>80元</h2>
+					<p>
+						深度清洁发动机长时间使用后留在发动机外部的灰尘，油污，输液等杂物。
+					</p>
+				</div>
+			</article>
+			<input type="hidden" th:value="${userId}" id="userId"/>
+			<input type="hidden" th:value="${villeage}" id="villeage"/>
+
+		</div>
+		<div class="fixed-bottom border-box flex justify-center items-center">
+			<a href="#" class="submit block">立即购买</a>
+		</div>
+		<script type="text/javascript" src="/lib/mod.js"></script>
+		<!--SCRIPT_PLACEHOLDER-->
+
+		<script type="text/javascript">
+			require("/modules/convenient-service/js/car-beauty-intro");
+		</script>
+
+	</body>
+</html>
